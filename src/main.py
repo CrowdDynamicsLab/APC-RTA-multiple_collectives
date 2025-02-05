@@ -23,9 +23,15 @@ if __name__ == "__main__":
                     help = "Path to save recos", default = "resources/recos")
   parser.add_argument("--models_path", type = str, required = False,
                     help = "Path to save models", default = "resources/models")
-  args = parser.parse_args()
+  parser.add_argument("--metadata_info", type = str, default = 'temp_input/metainfo.json')
+  parser.add_argument("--input_rta_folder", type = str, default = "resources/data/")
 
-  data_manager = DataManager()
+  
+  args = parser.parse_args()
+  with open(args.metadata_info, 'r') as fp:
+    metainfo = json.load(fp)
+  
+  data_manager = DataManager(foldername=args.input_rta_folder, n_tracks = metainfo['n_tracks'], n_playlists = metainfo['n_playlists'])
   with open(args.params_file, "r") as f:
     p = json.load(f)
 
