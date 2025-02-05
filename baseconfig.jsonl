@@ -1,0 +1,3 @@
+{"name": "strategy1_budget10", "budget": 10, "targetsongs": ["spotify:track:AlgoCollectiveSongURI0"], "strategy": "inclust"}
+{"name": "strategy2_budget20", "budget": 20, "targetsongs": ["spotify:track:AlgoCollectiveSongURI1"], "strategy": "dirlof_basic"}
+{"name": "strategy3_budget10", "budget": 10, "targetsongs": ["spotify:track:AlgoCollectiveSongURI2"], "strategy": "inclust"}
